@@ -2,6 +2,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.FileWriter;
+import java.io.RandomAccessFile;
 
 
 public class RecordsAndFiles {
@@ -19,6 +20,8 @@ public class RecordsAndFiles {
 
   private static TBook[] books = new TBook[25]; // Array of type Record
   private static int numBooks = 0;
+
+  private static int rSize = 50;
 
   public static void main(String[] args) {
     Scanner kbReader = new Scanner(System.in);
@@ -195,7 +198,6 @@ public class RecordsAndFiles {
   }
   }
 
-
   // function to write all books' data to the file
   public static void writeBookData() {
 
@@ -241,5 +243,6 @@ public class RecordsAndFiles {
     books[numBooks - 1] = null; // create a space 
     numBooks--;
 }
+
 
 }
